@@ -44,7 +44,9 @@ monogatari.assets ('gallery', {
 
 // Define the music used in the game.
 monogatari.assets ('music', {
-
+	'beforeSummon': 'beforeSummon.mp3',
+	'summon': 'Summon.mp3',
+	'afterSummon': 'afterSummon.mp3',
 });
 
 // Define the voice files used in the game.
@@ -141,6 +143,7 @@ monogatari.script ({
 		function(){
 			this.element().find('[data-component="text-box"]').hide()
 		  },
+		'play music beforeSummon with loop fade 5 volume 20',
 		'show scene office with fadeIn duration 1s',
 		'wait 3000',
 		`narrator Sinar matahari pagi yang menyelinap dari jendela menyinari sebuah ruang kerja berukuran 4x4.`,
@@ -153,11 +156,11 @@ monogatari.script ({
 		'show scene maudyTyping with fadeIn duration 1s',
 		'wait 2000',
 		`narrator Seorang wanita dengan kemeja putih tanpa lengan terlihat sedang duduk dan mengetikkan sesuatu di laptopnya.`,
-		'maudi:serious Hmm kalau gini error gak ya…',
+		'maudi Hmm kalau gini error gak ya…',
 		'show scene office with fadeIn duration 1s',
-		'show character maudi serious with exclaim',
+		'show character maudi neutral with exclaim',
 		`narrator Tangan wanita itu bergerak menyisipkan beberapa helaian rambut kebelakang telinganya, sebuah kebiasaan yang ia lakukan setiap kali ia bekerja.`,
-		`maudi:serious Kayaknya Dika sudah mulai terbiasa pakai laptopnya`,
+		`maudi Kayaknya Dika sudah mulai terbiasa pakai laptopnya`,
 		`narrator Jemarinya terhenti sejenak dan kini mata birunya tertuju ke sebuah video livestream yang menampilkan seorang pria yang sedang bermain video game.`,
 		function(){
 			this.element().find('[data-component="text-box"]').hide()
@@ -174,7 +177,9 @@ monogatari.script ({
 		`narrator Helaan nafas dapat terdengar dari wanita itu`,
 		`maudi Padahal dia aja yang gak bisa nyetir. Sudah tau licin malah naik bukit.`,
 		`narrator Wanita itu terdiam sejenak lalu kembali mengetikkan beberapa baris code ke laptopnya.`,
+		'stop music beforeSummon with fade 2',
 		'show character maudi serious with exclaim',
+		'play music summon with loop fade 2 volume 20',
 		`maudi:serious Yah, tapi cuma dia yang cocok untuk rencanaku.`,
 		`maudi:serious Ini kesempatan terakhirku untuk mengembalikan kejayaan clan Ina`,
 		`narrator Ribuan baris code yang ia perlukan sudah tersusun rapi dan siap untuk dicoba`,
@@ -220,7 +225,9 @@ monogatari.script ({
 		'show scene summonSuccess with flash duration 1s',
 		'wait 2000',
 		`narrator Dika yang tadinya ia tonton melalui livestream kini muncul di hadapannya.`,
+		'stop music summon with fade 2',
 		'show scene officeNight with fadeIn duration 1s',
+		'play music afterSummon with loop fade 2 volume 20',
 		'show character dika surprised at left with exclaim',
 		`narrator Dika tidak mengatakan apapun. Wajahnya yang terlihat kebingungan berbalik menatap sekelilingnya dengan mulut terbuka.`,
 		'show character maudi neutral with exclaim',
@@ -237,6 +244,7 @@ monogatari.script ({
 		function(){
 			this.element().find('[data-component="text-box"]').hide()
 		  },
+		'stop music afterSummon with fade 2',
 		`show scene endScreen with fadeIn duration 1s`,
 		`wait`,
 		'end'
