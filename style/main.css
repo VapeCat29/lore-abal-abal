@@ -1,0 +1,455 @@
+/**
+ * =============================================================================
+ * This is the file where all your styling should go in.
+ * Instead of modifying the styles found in the monogatari.css file or others,
+ * you should overwrite those styles in this file.
+ *
+ * The CSS selectors shown are not an extensive list but they are the most
+ * common you might want to change. To find what other elements are available,
+ * you can take a look at the monogatari.css file or use your browser's dev
+ * tools to inspect the elements.
+ * =============================================================================
+**/
+:root {
+	--color-light-blue: #A8D0FF;
+	--color-gold: #F8CA5D;
+  }
+
+@font-face {
+	font-family: "BadWriting";
+	src: url(../custom_ui/KidsCorner/KidsCorner-Regular.ttf) format("truetype");
+}
+
+p{
+	font-family: "BadWriting";
+	font-size: 25px;
+}
+
+span{
+	font-family: "BadWriting";
+	font-size: 30px;
+}
+
+body {
+
+}
+
+/* Simple Button styles*/
+button {
+
+}
+
+/* Simple Button Style on Hover */
+button:hover {
+
+}
+
+/* General Styling for Menu Screens */
+[data-screen] {
+
+}
+
+/**
+ * ===========================
+ * Main Menu Styling
+ * ===========================
+**/
+
+/* Main Menu Styling */
+[data-screen="main"] {
+	background-image: url("../custom_ui/mainBGTitle.png");
+}
+
+/* Main Menu Buttons Styling */
+[data-screen="main"] button {
+	background: url("../custom_ui/textBoxMain.png");
+	background-size: cover;
+	color: var(--color-light-blue);
+	font-family: "BadWriting";
+	font-size: 30px;
+}
+
+[data-screen="main"] button:hover {
+	background: url("../custom_ui/textBoxHover.png");
+	background-size: cover;
+	color: #474747;
+	font-weight: bold;
+}
+/**
+ * ===========================
+ * Save and Load Menus Styling
+ * ===========================
+**/
+
+/* Slots Style */
+
+[data-component="save-slot"] figure {
+	font-family: "BadWriting";
+	font-size: 15px;
+}
+
+/* Slot's Image Style */
+[data-component="save-slot"] img {
+
+}
+
+/* Slots Title Style */
+[data-component="save-slot"] figcaption {
+	font-family: "BadWriting";
+	font-size: 20px;
+}
+
+/* Slots Delete Button Style */
+[data-component="save-slot"] button {
+	
+}
+
+/**
+ * ===========================
+ * Game Elements Styling
+ * ===========================
+**/
+
+/* Choice Buttons style */
+[data-component="choice-container"] button {
+
+}
+
+/* Choice Button Style on Hover */
+[data-component="choice-container"] button:hover {
+
+}
+
+/* Text Box styling */
+[data-component="text-box"] {
+
+}
+
+/* Character Name Style */
+[data-ui="who"] {
+
+}
+
+/* Style for Centered Text */
+[data-component="centered-dialog"] {
+
+}
+
+/* Character Images Styles */
+[data-screen="game"] [data-character] {
+
+}
+
+/* Other Images Styles */
+[data-screen="game"] [data-image] {
+
+}
+
+/**
+ * ===========================
+ * Quick Menu Styling
+ * ===========================
+**/
+
+/* These styles are applied to the Mobile version of the Quick Menu */
+
+/* Quick Menu Style */
+[data-component="quick-menu"] {
+
+}
+
+/* Quick Menu Buttons Style */
+[data-component="quick-menu"] span {
+
+}
+
+/* Quick Menu Buttons Style on Hover */
+[data-component="quick-menu"] span:hover {
+
+}
+
+/* Quick Menu Buttons Icon Style */
+[data-component="quick-menu"] > span > .fa {
+
+}
+
+/**
+ * ===========================
+ * Range Styling
+ * ===========================
+**/
+
+/* Use the background property to set a color for these */
+input[type=range]:focus::-webkit-slider-runnable-track {
+
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+
+}
+
+input[type=range]:focus::-ms-fill-upper {
+
+}
+
+input[type=range]:focus::-ms-fill-lower {
+
+}
+
+input[type=range]::-moz-range-track {
+
+}
+
+input[type=range]::-ms-fill-lower {
+
+}
+
+input[type=range]::-ms-fill-upper {
+
+}
+
+/** Medium Screens, Phablets (601px) **/
+@media screen and (min-width: 37.56255em) {
+	/* Styles for the desktop version of the Quick Menu */
+
+	/* Quick Menu Style */
+	[data-component="quick-menu"] {
+
+	}
+
+	/* Quick Menu Buttons Style */
+	[data-component="quick-menu"] span {
+
+	}
+
+	/* Quick Menu Buttons Style on Hover */
+	[data-component="quick-menu"] span:hover {
+
+	}
+}
+
+/** Medium Devices, Tablets (992px)**/
+@media screen and (min-width: 62em) {
+
+}
+
+/** HD Screen, Large Devices, Wide Screens, Desktop (1200px) **/
+@media screen and (min-width: 75em) {
+
+}
+
+/** Full HD Screen, Large Devices, Wide Screens, Large Desktops (1920px) **/
+@media screen and (min-width: 120em) {
+
+}
+
+/** Retina Screen , Large Devices, Wide Screens(2560px) **/
+@media screen and (min-width: 160em) {
+
+}
+
+/** 4k Screens, Large Devices, Wide Screens (3840px) **/
+@media screen and (min-width: 240em) {
+
+}
+
+/** 5k Screens, Large Devices, Wide Screens (5000px) **/
+@media screen and (min-width: 312.5em) {
+
+}
+
+/** 8k Screens, Large Devices, Wide Screens (8000px) **/
+@media screen and (min-width: 500em) {
+
+}
+
+/* Custom */
+[data-string=AdvanceHelp] {
+	display: none;
+}
+
+[data-ui=saveSlots] [data-ui=slots] {
+	border: 0;
+}
+
+[data-content=credits] h3 {
+	margin: 10px 0;
+}
+
+[data-content=credits] .row > *:nth-child(1) {
+	margin: 0 5px 0 0;
+	align-self: flex-start;
+	text-align: right;
+}
+
+[data-content=credits] .row > *:nth-child(2) {
+	margin: 0 0 0 5px;
+	text-align: left;
+}
+
+input[type=range] {
+	border: 1px solid var(--color-green);
+	padding: 1px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 1px 1px 1px #000000;
+  border: 1px solid #000000;
+  height: 30px;
+  width: 15px;
+  border-radius: 5px;
+  background: #ffffff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -0.5px;
+}
+
+quick-menu.transparent button:focus, quick-menu.transparent button:hover {
+	color: #fff;
+	font-weight: bold;
+}
+
+quick-menu.transparent {
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+[data-component="text-box"] {
+	display: grid;
+	margin-left: 20px;
+	width: calc(100% - 40px);
+	height: 200px;
+	max-height: initial;
+	min-height: initial;
+	grid-template-columns: 200px 1fr;
+	grid-template-rows: auto 1fr;
+	background: none;
+	overflow: visible !important;
+}
+
+
+[data-input=slotName] {
+	padding: 13px 10px;
+	background-color: #cbcccc;
+	user-select: none;
+}
+
+[data-string=LoadSlots] {
+	display: none;
+}
+
+text-box [data-content=name] {
+	position: absolute;
+	top: 0;
+	left: 50px;
+	background: var(--color-gold);
+	border-radius: 10px;
+}
+
+text-box [data-content=side-image] {
+	position: relative;
+	display: flex;
+	align-items: flex-end;
+	border: 7px solid #fff;
+	border-radius: 10px;
+	background: #ffffff;
+}
+
+text-box [data-content=side-image]::after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border: 7px solid #292A2D;
+	border-radius: 10px;
+	content: '';
+}
+
+text-box [data-content=text] {
+	margin-top: 30px;
+	margin-left: 5px;
+	padding-top: 20px;
+	border-radius: 10px;
+	border: 7px solid #fff;
+	background: #292A2D;
+}
+
+[data-ui=who] {
+	font-weight: bold;
+	color: #292A2D !important;
+}
+
+[data-component="quick-menu"] {
+	padding: 0 20px;
+}
+
+.boldedText {
+	font-weight: bold;
+}
+
+.italicText{
+	font-style: italic;
+}
+
+/* animations */
+.showScene {
+	animation: showScene .5s ease-out;
+	transform-origin: center;
+}
+
+@keyframes showScene {
+	0% {
+    transform: rotateY(90deg);
+	}
+	100% {
+		transform: rotateY(0deg);
+	}
+}
+
+.exclaim {
+	animation: exclaim .3s ease-out;
+	transform-origin: center;
+}
+
+@keyframes exclaim {
+	0% {
+    transform: translateY(0);
+	}
+	50% {
+    transform: translateY(-20px);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+.deject {
+	animation: deject .3s ease-out;
+	transform-origin: center;
+}
+
+@keyframes deject {
+	0% {
+    transform: translateY(0);
+	}
+	50% {
+    transform: translateY(20px);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+.assert {
+	animation: assert 1s ease-out forwards;
+	transform-origin: top;
+}
+
+@keyframes assert {
+	0% {
+    transform: scale(1);
+	}
+	100% {
+		transform: scale(1.5);
+	}
+}
