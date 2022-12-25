@@ -47,6 +47,7 @@ monogatari.assets ('music', {
 	'beforeSummon': 'beforeSummon.mp3',
 	'summon': 'Summon.mp3',
 	'afterSummon': 'afterSummon.mp3',
+	'mainMenu': 'mainMenu.mp3',
 });
 
 // Define the voice files used in the game.
@@ -56,7 +57,11 @@ monogatari.assets ('voices', {
 
 // Define the sounds used in the game.
 monogatari.assets ('sounds', {
-
+	'genshinSummon': 'genshinSummon.mp3',
+	'typing': 'typing.mp3',
+	'electroSummon': 'electroSummon.mp3',
+	'takingBook': 'takingBook.mp3',
+	'walking': 'walking.mp3',
 });
 
 // Define the videos used in the game.
@@ -149,17 +154,18 @@ monogatari.script ({
 		`narrator Sinar matahari pagi yang menyelinap dari jendela menyinari sebuah ruang kerja berukuran 4x4.`,
 		`narrator Tidak terdapat banyak interior di dalam ruangan tersebut, hanya sebuah meja, printer, kursi office, rak buku berukuran sedang di samping kanan meja, dan sebuah laptop berwarna silver.`,
 		`narrator Meski ruangan tersebut terlihat sedikit kosong, tetapi pencahayaan yang baik membuat ruangan itu terlihat cerah dan nyaman.`,
+		'play sound typing with loop',
 		'show scene maudyTyping with fadeIn duration 2s',
 		function(){
 			this.element().find('[data-component="text-box"]').hide()
 		  },
-		'show scene maudyTyping with fadeIn duration 1s',
 		'wait 2000',
 		`narrator Seorang wanita dengan kemeja putih tanpa lengan terlihat sedang duduk dan mengetikkan sesuatu di laptopnya.`,
 		'maudi Hmm kalau gini error gak ya…',
 		'show scene office with fadeIn duration 1s',
 		'show character maudi neutral with exclaim',
 		`narrator Tangan wanita itu bergerak menyisipkan beberapa helaian rambut kebelakang telinganya, sebuah kebiasaan yang ia lakukan setiap kali ia bekerja.`,
+		'stop sound typing with fade 2',
 		`maudi Kayaknya Dika sudah mulai terbiasa pakai laptopnya`,
 		`narrator Jemarinya terhenti sejenak dan kini mata birunya tertuju ke sebuah video livestream yang menampilkan seorang pria yang sedang bermain video game.`,
 		function(){
@@ -177,11 +183,13 @@ monogatari.script ({
 		`narrator Helaan nafas dapat terdengar dari wanita itu`,
 		`maudi Padahal dia aja yang gak bisa nyetir. Sudah tau licin malah naik bukit.`,
 		`narrator Wanita itu terdiam sejenak lalu kembali mengetikkan beberapa baris code ke laptopnya.`,
+		'play sound typing with loop',
 		'stop music beforeSummon with fade 2',
 		'show character maudi serious with exclaim',
-		'play music summon with loop fade 2 volume 20',
+		'play music summon with loop fade 2 volume 10',
 		`maudi:serious Yah, tapi cuma dia yang cocok untuk rencanaku.`,
 		`maudi:serious Ini kesempatan terakhirku untuk mengembalikan kejayaan clan Ina`,
+		'stop sound typing with fade 2',
 		`narrator Ribuan baris code yang ia perlukan sudah tersusun rapi dan siap untuk dicoba`,
 		'show character maudi serious with pulse',
 		`narrator Dengan mata tajam dan jantung yang berdebar keras, wanita itu melakukan simulasi pemanggilan dengan code yang sudah ia ketik. (serius amat, padahal ini cuma proses compile wkwkwk)`,
@@ -192,9 +200,11 @@ monogatari.script ({
 		'show scene office with fadeIn duration 1s',
 		'show character maudi serious with exclaim',
 		`maudi:serious Cih, masih gagal juga.`,
+		'play sound typing with loop',
 		`narrator Wanita itu nampak kesal tetapi tanpa membuang waktu, ia kembali duduk dan memperbaiki codenya. (awikwok debugging momen)`,
 		'show scene officeNight with fadeIn duration 1s',
 		`narrator Pagi berganti malam, sinar matahari yang cerah kini digantikan oleh cahaya lampu yang cukup terang namun tidak menyilaukan.`,
+		'stop sound typing with fade 2',
 		'show character maudi sigh with fadeIn',
 		`wait 1000`,
 		'show character maudi neutral with fadeIn',
@@ -205,14 +215,17 @@ monogatari.script ({
 		function(){
 			this.element().find('[data-component="text-box"]').hide()
 		  },
+		'play sound takingBook',
 		`show scene tutorGacha with fadeIn duration 1s`,
 		`wait 2000`,
 		`maudi:serious Ok, dengan ini summonnya pasti berhasil.`,
 		'show scene officeNight with fadeIn duration 1s',
+		'play sound walking',
 		`narrator Wanita itu berjalan ketengah ruangan dan bersiap menjalankan code pemanggilannya.`,
 		`narrator Masih memegang buku ditangan kirinya, wanita itu mengarahkan tangan kanannya kedepan.`,
 		'show scene summon with fadeIn duration 2s',
 		`maudi:serious SUMMON!`,
+		'play sound electroSummon with volume 50',
 		function(){
 			this.element().find('[data-component="text-box"]').hide()
 		  },
@@ -222,6 +235,7 @@ monogatari.script ({
 		'wait 1000',
 		'show scene summon with shakeY duration 1s',
 		'wait 1000',
+		'play sound genshinSummon with volume 75',
 		'show scene summonSuccess with flash duration 1s',
 		'wait 2000',
 		`narrator Dika yang tadinya ia tonton melalui livestream kini muncul di hadapannya.`,
